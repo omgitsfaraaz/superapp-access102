@@ -49,7 +49,7 @@ app.use("/api/categories", categoryRouter);
 app.get("/", (req, res) => res.json({ message: "Hello World" }));
 
 const startServer = () => {
-  sequelize.sync({force: true});
+  sequelize.sync();
   sequelize
     .authenticate()
     .then(() => {
